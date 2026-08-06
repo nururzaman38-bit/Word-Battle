@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+    
+    <!-- Margins and Padding -->
+    <dimen name="screen_margin">16dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="text_padding">12dp</dimen>
+    
+    <!-- Corner Radius -->
+    <dimen name="radius_sm">8dp</dimen>
+    <dimen name="radius_md">12dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_xl">20dp</dimen>
+    <dimen name="radius_xxl">24dp</dimen>
+    <dimen name="radius_round">50dp</dimen>
+    
+    <!-- Button -->
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="button_padding_horizontal">24dp</dimen>
+    <dimen name="button_corner_radius">20dp</dimen>
+    
+    <!-- Card -->
+    <dimen name="card_elevation">6dp</dimen>
+    <dimen name="card_corner_radius">18dp</dimen>
+    
+    <!-- Tiles -->
+    <dimen name="tile_size_small">32dp</dimen>
+    <dimen name="tile_size_medium">48dp</dimen>
+    <dimen name="tile_size_large">56dp</dimen>
+    <dimen name="tile_size_board">36dp</dimen>
+    <dimen name="tile_text_size">18sp</dimen>
+    <dimen name="tile_text_size_small">14sp</dimen>
+    
+    <!-- Board -->
+    <dimen name="board_cell_size">36dp</dimen>
+    <dimen name="board_border_width">1dp</dimen>
+    
+    <!-- Top Bar -->
+    <dimen name="top_bar_height">56dp</dimen>
+    <dimen name="avatar_size_small">36dp</dimen>
+    <dimen name="avatar_size_medium">48dp</dimen>
+    <dimen name="avatar_size_large">64dp</dimen>
+    <dimen name="avatar_ring_width">3dp</dimen>
+    
+    <!-- Bottom Nav -->
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="nav_icon_size">24dp</dimen>
+    <dimen name="nav_icon_size_large">28dp</dimen>
+    
+    <!-- Player -->
+    <dimen name="player_card_height">72dp</dimen>
+    <dimen name="player_score_text_size">20sp</dimen>
+    
+    <!-- Rank Badge -->
+    <dimen name="rank_badge_size">28dp</dimen>
+    
+    <!-- Ripple -->
+    <dimen name="ripple_size">48dp</dimen>
+</resources>

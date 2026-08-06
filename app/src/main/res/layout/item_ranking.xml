@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="@dimen/spacing_md">
+
+    <!-- Rank -->
+    <TextView
+        android:id="@+id/tv_rank"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/purple_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/baloo_2_bold" />
+
+    <!-- Avatar -->
+    <com.wordbattle.ui.components.AvatarView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/avatar_size_medium"
+        android:layout_height="@dimen/avatar_size_medium"
+        android:layout_marginStart="@dimen/spacing_sm" />
+
+    <!-- Name and Score -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/spacing_md"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ink"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/baloo_2_semibold" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/gray_dark"
+            android:textSize="12sp"
+            android:fontFamily="@font/nunito_regular" />
+    </LinearLayout>
+
+    <!-- Medal -->
+    <TextView
+        android:id="@+id/tv_medal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:visibility="gone" />
+</LinearLayout>

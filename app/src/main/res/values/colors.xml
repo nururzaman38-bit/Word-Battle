@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="purple_dark">#2B0A4E</color>
+    <color name="purple">#5B1E8C</color>
+    <color name="purple_light">#8A3FE0</color>
+    <color name="purple_gradient_start">#3A1367</color>
+    <color name="purple_gradient_mid">#6A25A8</color>
+    <color name="purple_gradient_end">#8A3FE0</color>
+    
+    <!-- Accent Colors -->
+    <color name="gold">#FFC93C</color>
+    <color name="gold_dark">#E6B830</color>
+    <color name="red">#FF4E4E</color>
+    <color name="teal">#00C9A7</color>
+    <color name="blue">#4C6FFF</color>
+    
+    <!-- Text Colors -->
+    <color name="ink">#241242</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray_muted">#B3ADC4</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_dark">#666666</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#00C9A7</color>
+    <color name="warning">#FFC107</color>
+    <color name="error">#FF4E4E</color>
+    <color name="info">#4C6FFF</color>
+    
+    <!-- Component Colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="tile_background">#FFFFFF</color>
+    <color name="tile_gold_background">#FFC93C</color>
+    <color name="board_cell_empty">#E8DFF5</color>
+    <color name="board_cell_filled">#FFFFFF</color>
+    <color name="board_cell_scored">#C8F7E9</color>
+    <color name="top_bar_background">#2B0A4E</color>
+    <color name="bottom_nav_background">#FFFFFF</color>
+    <color name="toast_background">#241242</color>
+    
+    <!-- Gradient Colors -->
+    <color name="primary_gradient_start">#3A1367</color>
+    <color name="primary_gradient_end">#8A3FE0</color>
+    <color name="gold_gradient_start">#FFD54F</color>
+    <color name="gold_gradient_end">#FFC107</color>
+    <color name="card_gradient_start">#FFFFFF</color>
+    <color name="card_gradient_end">#F8F8FF</color>
+    
+    <!-- Shadow colors -->
+    <color name="shadow_color">#2B0A4E</color>
+</resources>

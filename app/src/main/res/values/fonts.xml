@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nunito_certifiers">
+        <item>38:64:1B:16:69:94:06:6B:5B:9C:5D:B7:FA:27:FB:A3:96:1D:43:A7:CE:5D:CE:B8:96:79:67:8D:64:00:72:66:62:F6:4E:C3:93:81:48:49:60:7B:CD:69:26:44:27:B3:87:6B:63:84:0A:9E:3C:54:95:CC:48:96:6B:77:82:42:42:82:51:8C:2E:52:38:8F:55:6A:0B:88:63:B3:1A:64:6B:73:40:1F:94:F1:29:5D:29:82:59:34:C9:61:BC:5C:63:69:47:C8:42:B5:73:81:67:65:15:2E:70:73:65:56</item>
+    </string-array>
+    
+    <string-array name="baloo2_certifiers">
+        <item>38:64:1B:16:69:94:06:6B:5B:9C:5D:B7:FA:27:FB:A3:96:1D:43:A7:CE:5D:CE:B8:96:79:67:8D:64:00:72:66:62:F6:4E:C3:93:81:48:49:60:7B:CD:69:26:44:27:B3:87:6B:63:84:0A:9E:3C:54:95:CC:48:96:6B:77:82:42:42:82:51:8C:2E:52:38:8F:55:6A:0B:88:63:B3:1A:64:6B:73:40:1F:94:F1:29:5D:29:82:59:34:C9:61:BC:5C:63:69:47:C8:42:B5:73:81:67:65:15:2E:70:73:65:56</item>
+    </string-array>
+    
+    <!-- Font references -->
+    <string name="font_baloo_2">Baloo 2</string>
+    <string name="font_nunito">Nunito</string>
+</resources>

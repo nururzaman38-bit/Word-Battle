@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Letter tiles logo -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <include
+                android:id="@+id/tile_w"
+                layout="@layout/item_letter_tile"
+                android:layout_width="@dimen/tile_size_large"
+                android:layout_height="@dimen/tile_size_large" />
+
+            <TextView
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="8dp" />
+
+            <include
+                android:id="@+id/tile_o1"
+                layout="@layout/item_letter_tile"
+                android:layout_width="@dimen/tile_size_large"
+                android:layout_height="@dimen/tile_size_large" />
+
+            <include
+                android:id="@+id/tile_r"
+                layout="@layout/item_letter_tile"
+                android:layout_width="@dimen/tile_size_large"
+                android:layout_height="@dimen/tile_size_large" />
+
+            <include
+                android:id="@+id/tile_d"
+                layout="@layout/item_letter_tile"
+                android:layout_width="@dimen/tile_size_large"
+                android:layout_height="@dimen/tile_size_large" />
+
+            <TextView
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="8dp" />
+
+            <include
+                android:id="@+id/tile_b1"
+                layout="@layout/item_letter_tile"
+                android:layout_width="@dimen/tile_size_large"
+                android:layout_height="@dimen/tile_size_large" />
+
+            <include
+                android:id="@+id/tile_a"
+                layout="@layout/item_letter_tile"
+                android:layout_width="@dimen/tile_size_large"
+                android:layout_height="@dimen/tile_size_large" />
+
+            <include
+                android:id="@+id/tile_t"
+                layout="@layout/item_letter_tile"
+                android:layout_width="@dimen/tile_size_large"
+                android:layout_height="@dimen/tile_size_large" />
+
+            <include
+                android:id="@+id/tile_t2"
+                layout="@layout/item_letter_tile"
+                android:layout_width="@dimen/tile_size_large"
+                android:layout_height="@dimen/tile_size_large" />
+
+            <include
+                android:id="@+id/tile_l_e"
+                layout="@layout/item_letter_tile"
+                android:layout_width="@dimen/tile_size_large"
+                android:layout_height="@dimen/tile_size_large" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="WORD BATTLE"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/baloo_2_bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="@string/app_name"
+            android:textColor="@color/gold"
+            android:textSize="18sp"
+            android:fontFamily="@font/nunito_semibold" />
+
+        <!-- Loading dots -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xl"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/dot1"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/bg_tile_white"
+                android:layout_margin="4dp" />
+
+            <View
+                android:id="@+id/dot2"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/bg_tile_white"
+                android:layout_margin="4dp" />
+
+            <View
+                android:id="@+id/dot3"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/bg_tile_white"
+                android:layout_margin="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

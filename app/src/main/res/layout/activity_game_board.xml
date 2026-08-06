@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical">
+
+    <!-- Score Header -->
+    <LinearLayout
+        android:id="@+id/header_players"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/spacing_md"
+        android:background="@color/top_bar_background"
+        android:elevation="4dp">
+
+        <!-- Player 1 -->
+        <LinearLayout
+            android:id="@+id/player_1_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/spacing_sm">
+
+            <TextView
+                android:id="@+id/tv_player_1_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_semibold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Player 1" />
+
+            <TextView
+                android:id="@+id/tv_player_1_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gold"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_bold"
+                tools:text="45" />
+
+            <View
+                android:id="@+id/indicator_1"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_tile_white"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!-- Player 2 -->
+        <LinearLayout
+            android:id="@+id/player_2_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/spacing_sm">
+
+            <TextView
+                android:id="@+id/tv_player_2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_semibold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Player 2" />
+
+            <TextView
+                android:id="@+id/tv_player_2_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gold"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_bold"
+                tools:text="32" />
+
+            <View
+                android:id="@+id/indicator_2"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_tile_white"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!-- Player 3 (if needed) -->
+        <LinearLayout
+            android:id="@+id/player_3_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/spacing_sm"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_player_3_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_semibold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Player 3" />
+
+            <TextView
+                android:id="@+id/tv_player_3_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gold"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_bold"
+                tools:text="28" />
+
+            <View
+                android:id="@+id/indicator_3"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_tile_white"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!-- Player 4 (if needed) -->
+        <LinearLayout
+            android:id="@+id/player_4_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/spacing_sm"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_player_4_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_semibold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Player 4" />
+
+            <TextView
+                android:id="@+id/tv_player_4_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gold"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_bold"
+                tools:text="15" />
+
+            <View
+                android:id="@+id/indicator_4"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_tile_white"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Board -->
+    <ScrollView
+        android:id="@+id/scroll_board"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#1A0A2E"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/spacing_md">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Letter Rack -->
+    <HorizontalScrollView
+        android:id="@+id/scroll_rack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/top_bar_background"
+        android:elevation="4dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/rack_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="@dimen/spacing_sm">
+
+            <!-- Letter tiles will be added programmatically -->
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Turn Indicator / Waiting Toast -->
+    <TextView
+        android:id="@+id/tv_turn_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/screen_margin"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/baloo_2_bold"
+        android:background="@drawable/bg_tile_white"
+        android:padding="@dimen/spacing_md"
+        android:visibility="gone"
+        tools:text="Waiting for Player 2..."
+        tools:visibility="visible" />
+</LinearLayout>

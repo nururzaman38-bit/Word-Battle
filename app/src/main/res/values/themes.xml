@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Application Theme -->
+    <style name="Theme.WordBattle" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/purple_dark</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowBackground">@drawable/gradient_background</item>
+    </style>
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.WordBattle.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/purple_gradient_start</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.WordBattle</item>
+    </style>
+
+    <!-- Primary Button Style -->
+    <style name="PrimaryButton" parent="Widget.Material3.Button">
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/baloo_2_bold</item>
+        <item name="android:paddingStart">32dp</item>
+        <item name="android:paddingEnd">32dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:background">@drawable/bg_gold_button</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:stateListAnimator">@animator/button_press</item>
+    </style>
+
+    <!-- Secondary Button Style -->
+    <style name="SecondaryButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">@color/purple_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/baloo_2_bold</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="strokeColor">@color/purple_light</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+
+    <!-- Card Style -->
+    <style name="CardStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardCornerRadius">18dp</item>
+        <item name="cardElevation">6dp</item>
+        <item name="cardForegroundColor">@color/card_background</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="TextStyle.Display" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:fontFamily">@font/baloo_2_extrabold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="TextStyle.Heading1" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">@font/baloo_2_bold</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="TextStyle.Heading2" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:fontFamily">@font/baloo_2_bold</item>
+        <item name="android:textColor">@color/purple_dark</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextStyle.Heading3" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/baloo_2_semibold</item>
+        <item name="android:textColor">@color/purple_dark</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextStyle.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">@font/nunito_regular</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextStyle.BodySmall" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">@font/nunito_regular</item>
+        <item name="android:textColor">@color/gray_dark</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextStyle.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:fontFamily">@font/nunito_regular</item>
+        <item name="android:textColor">@color/gray_dark</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextStyle.Button" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">@font/baloo_2_bold</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.WhiteButton" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">@font/baloo_2_bold</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Bottom Navigation Style -->
+    <style name="BottomNavText" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="android:textColor">@color/gray_muted</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BottomNavTextActive" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="android:textColor">@color/purple_light</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Input Field Style -->
+    <style name="InputField" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/purple_light</item>
+        <item name="hintTextColor">@color/purple_light</item>
+    </style>
+
+    <!-- Dialog Style -->
+    <style name="WordBattleDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/DialogShapeAppearance</item>
+    </style>
+
+    <style name="DialogShapeAppearance" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">22dp</item>
+    </style>
+</resources>
