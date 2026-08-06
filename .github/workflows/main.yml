@@ -1,0 +1,112 @@
+name: Universal Android APK Build
+
+on:
+  push:
+    branches: [ "main", "master" ]
+    tags: [ "v*" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Select APK Build Type'
+        required: true
+        default: 'debug'
+        type: choice
+        options:
+          - debug
+          - release
+          - both
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  build:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21 (Compatible with AGP 8.x+)
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.3.1'
+          validate-wrappers: false
+
+      - name: Configure Environment Secrets (.env & local.properties)
+        run: |
+          if [ ! -f ".env" ] && [ -f ".env.example" ]; then
+            echo "Creating .env from .env.example..."
+            cp .env.example .env
+          elif [ ! -f ".env" ]; then
+            echo "Creating empty .env file..."
+            touch .env
+          fi
+          if [ ! -f "local.properties" ]; then
+            echo "sdk.dir=$ANDROID_HOME" > local.properties
+          fi
+
+      - name: Ensure Debug Keystore Exists
+        run: |
+          if [ -f "debug.keystore.base64" ]; then
+            echo "Decoding debug.keystore from base64..."
+            base64 -d debug.keystore.base64 > debug.keystore
+          elif [ ! -f "debug.keystore" ]; then
+            echo "Generating fallback debug.keystore..."
+            keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+          fi
+
+      - name: Build Android APK (Universal Gradle / Gradlew Runner)
+        run: |
+          BUILD_TYPE="${{ github.event.inputs.build_type || 'debug' }}"
+          echo "Building APK with target: $BUILD_TYPE"
+          
+          # Determine whether to use wrapper (./gradlew) or global gradle
+          if [ -f "./gradlew" ]; then
+            chmod +x ./gradlew
+            GRADLE_CMD="./gradlew"
+          else
+            GRADLE_CMD="gradle"
+          fi
+          echo "Using Gradle command: $GRADLE_CMD"
+
+          if [ "$BUILD_TYPE" == "release" ]; then
+            $GRADLE_CMD assembleRelease --stacktrace
+          elif [ "$BUILD_TYPE" == "both" ]; then
+            $GRADLE_CMD assembleDebug assembleRelease --stacktrace
+          else
+            $GRADLE_CMD assembleDebug --stacktrace
+          fi
+
+      - name: Upload APK Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.event.repository.name }}-APK-${{ github.run_number }}
+          path: |
+            **/build/outputs/apk/**/*.apk
+            .build-outputs/*.apk
+            *.apk
+          retention-days: 30
+
+      - name: Create GitHub Release & Attach APK (On Tag Push Only)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            **/build/outputs/apk/**/*.apk
+            .build-outputs/*.apk
+            *.apk
+          generate_release_notes: true
+          name: Release ${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
