@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="board_rows">15</integer>
+    <integer name="board_cols">15</integer>
+    <integer name="target_score">100</integer>
+    <integer name="min_word_length">2</integer>
+    <integer name="splash_duration_ms">2000</integer>
+    <integer name="toast_duration_ms">1600</integer>
+    <integer name="max_players">4</integer>
+</resources>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Welcome back!"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_bold" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gold"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_semibold"
+                tools:text="Player" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weekly_tournament"
+                    android:textColor="@color/purple_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/baloo_2_bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:text="Compete with friends this week!"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/nunito_regular" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/spacing_md"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <include layout="@layout/item_letter_tile_small"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp" />
+
+                    <TextView
+                        android:layout_width="4dp"
+                        android:layout_height="wrap_content"
+                        android:text=" " />
+
+                    <include layout="@layout/item_letter_tile_small"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp" />
+
+                    <TextView
+                        android:layout_width="4dp"
+                        android:layout_height="wrap_content"
+                        android:text=" " />
+
+                    <include layout="@layout/item_letter_tile_small"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xl"
+            android:text="@string/choose_mode"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/baloo_2_bold" />
+
+        <LinearLayout
+            android:id="@+id/mode_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_computer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/spacing_sm"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="4dp"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_md">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_dice"
+                        app:tint="@color/purple_light"
+                        android:contentDescription="@string/vs_computer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_sm"
+                        android:text="@string/vs_computer"
+                        android:textColor="@color/ink"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/baloo_2_semibold"
+                        android:gravity="center" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_2player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="@dimen/spacing_xs"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="4dp"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_md">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_friends"
+                        app:tint="@color/purple_light"
+                        android:contentDescription="@string/vs_2_players" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_sm"
+                        android:text="@string/vs_2_players"
+                        android:textColor="@color/ink"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/baloo_2_semibold"
+                        android:gravity="center" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_3player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="@dimen/spacing_xs"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="4dp"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_md">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_friends"
+                        app:tint="@color/purple_light"
+                        android:contentDescription="@string/vs_3_players" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_sm"
+                        android:text="@string/vs_3_players"
+                        android:textColor="@color/ink"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/baloo_2_semibold"
+                        android:gravity="center" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_4player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/spacing_sm"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="4dp"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_md">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_friends"
+                        app:tint="@color/purple_light"
+                        android:contentDescription="@string/vs_4_players" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_sm"
+                        android:text="@string/vs_4_players"
+                        android:textColor="@color/ink"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/baloo_2_semibold"
+                        android:gravity="center" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_play"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xl"
+            android:text="@string/play"
+            android:textColor="@color/ink"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/baloo_2_bold"
+            android:paddingVertical="@dimen/spacing_md"
+            android:background="@drawable/bg_gold_button"
+            android:elevation="6dp"
+            app:cornerRadius="@dimen/button_corner_radius"
+            app:icon="@drawable/ic_play"
+            app:iconGravity="textStart"
+            app:iconTint="@color/ink" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xl"
+            android:text="@string/quick_actions"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/baloo_2_semibold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_join_room"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/spacing_sm"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_md">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_share"
+                        app:tint="@color/purple_light"
+                        android:contentDescription="@string/join_room" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_sm"
+                        android:text="@string/join_room"
+                        android:textColor="@color/ink"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/baloo_2_semibold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_create_room"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/spacing_sm"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_md">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_add"
+                        app:tint="@color/purple_light"
+                        android:contentDescription="@string/create_room" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_sm"
+                        android:text="@string/create_room"
+                        android:textColor="@color/ink"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/baloo_2_semibold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

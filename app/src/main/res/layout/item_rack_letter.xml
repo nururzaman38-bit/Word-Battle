@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/tile_size_medium"
+    android:layout_height="@dimen/tile_size_medium"
+    android:padding="4dp">
+
+    <com.wordbattle.ui.components.LetterTileView
+        android:id="@+id/tile_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

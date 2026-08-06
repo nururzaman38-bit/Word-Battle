@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:padding="@dimen/screen_margin">
+
+    <include layout="@layout/layout_top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/leaderboard"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_rankings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_lg"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xl"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_play_again"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/play_again"
+                    android:textColor="@color/ink"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/baloo_2_bold"
+                    android:background="@drawable/bg_gold_button"
+                    android:elevation="4dp"
+                    app:cornerRadius="@dimen/button_corner_radius" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_home"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_md"
+                    android:text="@string/back_to_home"
+                    android:textColor="@color/purple_light"
+                    android:fontFamily="@font/baloo_2_semibold"
+                    app:strokeColor="@color/purple_light"
+                    app:cornerRadius="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

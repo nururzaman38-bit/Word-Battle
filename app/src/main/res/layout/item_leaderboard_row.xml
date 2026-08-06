@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="@dimen/spacing_md"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Rank Number / Medal -->
+    <TextView
+        android:id="@+id/tv_rank"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/purple_light"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/baloo_2_bold"
+        tools:text="#1" />
+
+    <!-- Avatar -->
+    <com.wordbattle.ui.components.AvatarView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/avatar_size_medium"
+        android:layout_height="@dimen/avatar_size_medium"
+        android:layout_marginStart="@dimen/spacing_sm" />
+
+    <!-- Name and Score -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/spacing_md"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ink"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/baloo_2_semibold"
+            tools:text="Player Name" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/gray_dark"
+            android:textSize="13sp"
+            android:fontFamily="@font/nunito_regular"
+            tools:text="1,250 points" />
+    </LinearLayout>
+
+    <!-- You Badge -->
+    <TextView
+        android:id="@+id/badge_you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YOU"
+        android:textColor="@color/gold"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/nunito_bold"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</LinearLayout>

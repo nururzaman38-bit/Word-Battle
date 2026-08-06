@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:padding="@dimen/screen_margin">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game Setup"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:text="Number of Players"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_semibold" />
+
+            <RadioGroup
+                android:id="@+id/rg_player_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md">
+
+                <RadioButton
+                    android:id="@+id/rb_2players"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Players"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/purple_light"
+                    android:padding="12dp"
+                    android:fontFamily="@font/baloo_2_semibold" />
+
+                <RadioButton
+                    android:id="@+id/rb_3players"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3 Players"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/purple_light"
+                    android:padding="12dp"
+                    android:fontFamily="@font/baloo_2_semibold" />
+
+                <RadioButton
+                    android:id="@+id/rb_4players"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4 Players"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/purple_light"
+                    android:padding="12dp"
+                    android:fontFamily="@font/baloo_2_semibold" />
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xl"
+                android:text="@string/play"
+                android:textColor="@color/ink"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo_2_bold"
+                android:background="@drawable/bg_gold_button"
+                android:elevation="4dp"
+                app:cornerRadius="@dimen/button_corner_radius" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

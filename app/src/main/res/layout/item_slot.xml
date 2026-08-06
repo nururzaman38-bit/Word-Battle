@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="@dimen/spacing_md">
+
+    <!-- Slot Number -->
+    <TextView
+        android:id="@+id/tv_slot_number"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/gray_muted"
+        android:textSize="14sp"
+        android:fontFamily="@font/baloo_2_semibold" />
+
+    <!-- Avatar -->
+    <com.wordbattle.ui.components.AvatarView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/avatar_size_small"
+        android:layout_height="@dimen/avatar_size_small"
+        android:layout_marginStart="@dimen/spacing_sm" />
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/spacing_sm"
+        android:textColor="@color/ink"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/baloo_2_semibold"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- Type Badge -->
+    <TextView
+        android:id="@+id/badge_type"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/nunito_bold"
+        android:background="@drawable/bg_gem_pill" />
+
+    <!-- Ready Toggle -->
+    <ToggleButton
+        android:id="@+id/toggle_ready"
+        android:layout_width="50dp"
+        android:layout_height="32dp"
+        android:textOn="@string/ready"
+        android:textOff="Not Ready"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:buttonTint="@color/purple_light" />
+</LinearLayout>

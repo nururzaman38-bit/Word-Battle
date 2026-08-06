@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_nav"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="@dimen/spacing_md"
+    android:paddingEnd="@dimen/spacing_md"
+    android:paddingTop="@dimen/spacing_sm"
+    android:paddingBottom="@dimen/spacing_sm"
+    android:elevation="8dp">
+
+    <!-- Home -->
+    <LinearLayout
+        android:id="@+id/nav_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_sm">
+
+        <ImageView
+            android:id="@+id/icon_home"
+            android:layout_width="@dimen/nav_icon_size"
+            android:layout_height="@dimen/nav_icon_size"
+            android:src="@drawable/ic_home"
+            android:contentDescription="@string/home"
+            app:tint="@color/purple_light" />
+
+        <TextView
+            android:id="@+id/label_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/home"
+            android:textColor="@color/purple_light"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito_bold" />
+    </LinearLayout>
+
+    <!-- Rank -->
+    <LinearLayout
+        android:id="@+id/nav_rank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_sm">
+
+        <ImageView
+            android:id="@+id/icon_rank"
+            android:layout_width="@dimen/nav_icon_size"
+            android:layout_height="@dimen/nav_icon_size"
+            android:src="@drawable/ic_rank"
+            android:contentDescription="@string/rank"
+            app:tint="@color/gray_muted" />
+
+        <TextView
+            android:id="@+id/label_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/rank"
+            android:textColor="@color/gray_muted"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito_bold" />
+    </LinearLayout>
+
+    <!-- Friends -->
+    <LinearLayout
+        android:id="@+id/nav_friends"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_sm">
+
+        <ImageView
+            android:id="@+id/icon_friends"
+            android:layout_width="@dimen/nav_icon_size"
+            android:layout_height="@dimen/nav_icon_size"
+            android:src="@drawable/ic_friends"
+            android:contentDescription="@string/friends"
+            app:tint="@color/gray_muted" />
+
+        <TextView
+            android:id="@+id/label_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/friends"
+            android:textColor="@color/gray_muted"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito_bold" />
+    </LinearLayout>
+
+    <!-- Profile -->
+    <LinearLayout
+        android:id="@+id/nav_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_sm">
+
+        <ImageView
+            android:id="@+id/icon_profile"
+            android:layout_width="@dimen/nav_icon_size"
+            android:layout_height="@dimen/nav_icon_size"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="@string/profile"
+            app:tint="@color/gray_muted" />
+
+        <TextView
+            android:id="@+id/label_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/profile"
+            android:textColor="@color/gray_muted"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito_bold" />
+    </LinearLayout>
+</LinearLayout>

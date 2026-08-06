@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fontProviderAuthority="com.google.android.gms.fonts"
+    android:fontProviderPackage="com.google.android.gms"
+    android:fontProviderQuery="Nunito"
+    android:fontProviderCerts="@array/nunito_certifiers">
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/nunito_regular" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="600"
+        android:font="@font/nunito_semibold" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        android:font="@font/nunito_bold" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="900"
+        android:font="@font/nunito_black" />
+</font-family>
